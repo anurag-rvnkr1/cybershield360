@@ -1,0 +1,19 @@
+# docker-compose.yml — local dev only, zero cost
+# Usage: docker compose up --build
+version: '3.9'
+services:
+  api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+    environment:
+      NODE_ENV: development
+      PORT: 3001
+      ALLOWED_ORIGINS: http://localhost:3001
+    volumes:
+      - ./backend/src:/app/src       # hot reload
+      - ./backend/public:/app/public
+    restart: unless-stopped
+    # No Redis, no extra services — just the one container!
