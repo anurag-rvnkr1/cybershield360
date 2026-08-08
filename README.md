@@ -28,7 +28,7 @@ Only the breach email lookup uses our own open-source breach database instead of
 
 ---
 
-## 🏗️ Architecture
+## 🏗️ Architecture:
 
 ```
 Internet → Railway Reverse Proxy (auto HTTPS free)
@@ -112,7 +112,7 @@ npm test
 
 ## 📡 API Reference
 
-All endpoints work identically to the premium version.
+All endpoints work identically to the premium version..
 
 ### `POST /api/breach/email`
 ```bash
@@ -188,7 +188,7 @@ This is the same privacy model used by 1Password, Firefox Monitor, Google Passwo
 
 ---
 
-## 🆙 Upgrade Path (When You Get Hired & Have Budget)
+## 🆙 Upgrade Path (When You Get Hired & Have Budget )
 
 ```
 Free Tier → Production  (just change env vars)
